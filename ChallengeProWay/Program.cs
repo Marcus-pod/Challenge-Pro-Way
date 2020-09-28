@@ -32,6 +32,25 @@ namespace ChallengeProWay
                 newGame = Console.ReadLine();
                 Console.WriteLine();
 
+                if (newGame == "Sim")
+                {
+                    Console.WriteLine("Informe o placar do jogo:");
+                    scoreboard = int.Parse(Console.ReadLine());
+
+                }
+                jogo++;
+
+                // condição do Mínimo e Máximo da Temporada e Quebra Recorde
+                if (scoreboard < minSeason)
+                {
+                    minSeason = scoreboard;
+                    minRecord++;
+                }
+                else if (scoreboard > maxSeason)
+                {
+                    maxSeason = scoreboard;
+                    maxRecord++;
+                }
             }
 
 
